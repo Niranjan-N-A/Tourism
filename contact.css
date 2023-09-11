@@ -1,0 +1,359 @@
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+nav{
+    background-color:white;
+    height: 60px;
+    width: 90%;
+    margin-top: 30px;
+    margin-left: 70px;
+    position: fixed;
+    border-radius: 10px;
+    z-index: 5;
+}
+.active{
+    background-color: rgb(59, 147, 177);
+    border-radius: 5px;
+}
+label.logo{
+color:black;
+font-size: 45px;
+line-height:60px;
+padding: 0 70px;
+font-weight: bold;
+}
+span{
+    color:rgba(228, 6, 6, 0.959);
+   
+}
+nav ul{
+    float: right;
+    padding-right: 60px; 
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 8px;
+   
+}
+nav ul li a{
+    position: relative;
+    color: rgb(10, 10, 10);
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+nav ul li a:before{
+    position:absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width:100%;
+    background:rgb(248, 3, 3);
+    transform: scaleX(0);
+    transform-origin:right;
+    transition: transform .4s linear;
+}
+nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin:right;
+}
+
+.checkbtn{
+    font-size: 30px;
+    float: right;
+    line-height: 60px;
+    color: black;
+    margin-right: 30px;
+    display: none;
+
+}
+#check{
+    display: none;
+}
+
+
+.con-foot{
+    position: relative;
+}
+.con-foot img{
+height: 100vh;
+width: 100%;
+object-fit: cover;
+filter: blur(4px);
+}
+.cf1{
+    position: absolute;
+    top:20%;
+    left: 15%;
+    z-index: 2;
+    width: 400px;
+    height: 400px;
+    color: white;
+}
+.cf1 h1{
+    color: black;
+margin: 20px auto;
+}
+.cf1 p{
+    font-size: 20px;
+}
+.cf1 button{
+    font-size: 17px;
+    margin: 30px auto;
+    width: 120px;
+    height: 40px;
+    border: 0;
+    background-color:rgb(211, 158, 25);
+    border-radius: 20px;
+}
+.cf2{
+    position: absolute;
+    top: 20%;
+    left: 55%;
+    z-index: 3;
+    width: 400px;
+    height: 400px;
+}
+.cf2 form{
+    margin: 20px auto;
+}
+.cf2 input{
+    width: 90%;
+    height: 40px;
+    outline: 0;
+    margin-bottom: 25px;
+    border: 0;
+    padding-left: 10px;
+}
+.cf2 label{
+    font-size: 18px;
+    color: white;
+}
+.cf2 button{
+    font-size: 20px;
+    margin-left: 20px;
+    width:150px;
+    height: 40px;
+    border: 0;
+    margin: auto 100px;
+    background-color:rgb(201, 152, 29);
+    border-radius: 17px;
+}
+.btm{
+    background-color: black;
+    padding: 20px;
+    padding-bottom: 100px;
+}
+.icon{
+    font-size: 60px;
+    color: red !important;
+    margin-left: 300px;
+
+}
+.icon i{
+    margin-left: 85px;
+}
+.botom{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    padding:20px;
+}
+.bot{
+    width: 250px;
+    height: 230px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px auto;
+    margin: 90px auto;
+}
+.bot i{
+    font-size: 50px;
+    margin: 20px auto;
+    color: red !important;
+}
+.bot h1{
+    font-size: 25px;
+    margin: 20px auto;
+}
+.bot p{
+    color: red !important; 
+}
+.bot:hover{
+    transform: scale(0.9);
+    cursor: pointer;
+}
+/* mobile view */
+
+@media screen and (min-width: 420px) and (max-width: 650px){
+
+    label.logo{
+        padding-left: 30px;
+        font-size: 26px;
+    }
+    nav{
+        margin-top: 0;
+        z-index: 5;
+        margin-left: 0;
+        width: 100%;
+    }
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #2c3e50;
+        top:60px;
+        left:-100%;
+        text-align: center;
+        transform: all .5s;
+        transition: all 0.8s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px;
+        line-height: 20px;
+    }
+    nav ul li a{
+        color: white;
+    }
+    #check:checked~ul{
+        left:0px;
+    }
+
+    .cf1{
+        width: 380px;
+       margin: 0px;
+        top: 2%;
+        left: 10%;
+    
+    }
+    .cf1 button{
+        display: none;
+    }
+    .cf1 h1{
+        margin: 65px auto;
+        font-size: 30px;
+    }
+    .cf1 p{
+        display: none;
+    }
+    
+    .cf2{
+        margin: 0px auto;
+        top: 22%;
+        left: 13%;
+    }
+    .cf2 input{
+        margin-bottom: 15px;
+    }
+    .botom{
+        flex-direction: column;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .bot{
+        margin: 50px auto;
+    }
+    .icon{
+        margin-left: 30px;
+    }
+    .icon i{
+        margin-left: 20px;
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width: 990px){
+
+    label.logo{
+        padding-left: 30px;
+    }
+    
+    nav{
+        margin-top: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+    .checkbtn{
+        display: block;
+        margin-right: 10px;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #2c3e50;
+        top:60px;
+        left:-100%;
+        text-align: center;
+        transform: all .5s;
+        transition: all 0.8s; 
+    }
+    nav ul li{
+        display: block;
+        margin: 50px;
+        line-height: 20px;
+    }
+    nav ul li a{
+        color: white;
+    }
+    #check:checked~ul{
+        left:0px;
+    }
+     .cf1 p{
+        display:none;
+     }
+     .cf1{
+        width: 380px;
+       margin: 0px;
+        top: 2%;
+        left: 25%;
+    
+    }
+    .cf1 button{
+        width: 90px;
+        height: 20px;
+        font-size: 18px;
+        margin: 10px;
+        display: none;
+    }
+    .cf1 h1{
+        margin: 0px auto;
+        font-size: 30px;
+        margin-top: 60px;
+    }
+    .cf2{
+        margin: 0px auto;
+        top: 20%;
+        left: 25%;
+        margin-bottom: 100px;
+    }
+    .cf2 input{
+        margin-bottom: 14px;
+    }
+    .botom{
+        flex-wrap: wrap;
+        padding-top: 100px;
+    }
+    .bot{
+        margin-top: 30px;
+    }
+    .icon{
+        margin-left: 30px;
+    }
+    .icon i{
+        margin-left:65px ;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Registration page</title>
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <label class="logo">ENOJY UR <span>VOYAGE</span>  </label>
+                <ul>
+                    <li><a  href="./home.html">Home</a></li>
+                    <li><a href="./About.html">About</a></li>
+                    <li><a href="./service.html">Service</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a class="active" href="./login.html">Login</a></li>
+                </ul>
+               
+            </nav>
+            </div>
+
+        <div class="form">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log in</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <form action="" id="login" class="input-group">
+             <input type="text" class="input-field" placeholder="UserName" required>
+             <i class="fa-solid fa-user"></i><br>
+             <input type="password" class="input-field" placeholder="Password" required>
+             <i class="fa-solid fa-lock"></i><br>
+             <input type="checkbox" class="check-box"><span>Remeber the password</span><br>
+             <button class="submit-btn">Login</button>
+             <p><span>Don't have an account?Register.</span></p>
+            </form>
+
+            <form action="" id="register" class="input-group">
+                <input type="text" class="input-field" placeholder="Enter UserName" required><i class="fa-solid fa-user"></i><br>
+                <input type="email" class="input-field" placeholder="Enter Email" required>
+                <i class="fa-solid fa-envelope"></i><br>
+                <input type="password" class="input-field" placeholder="Enter Password" required>
+                <i class="fa-solid fa-lock"></i><br>
+                <input type="checkbox" class="check-box"><span>I agree to the terms and condition</span><br>
+                <button class="submit-btn">Register</button>
+                <h4><span>Have an account Login.</span></h4>
+               </form>
+        </div>
+    </div>
+    <script>
+        var x =document.getElementById("login");
+        var y =document.getElementById("register");
+        var z =document.getElementById("btn");
+
+        function register(){
+            x.style.left="-400px";
+            y.style.left="20px";
+            z.style.left="105px";
+        }
+
+        function login(){
+            x.style.left="20px";
+            y.style.left="420px";
+            z.style.left="0px";
+        }
+    </script>
+</body>
+</html>
